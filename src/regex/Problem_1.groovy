@@ -9,7 +9,12 @@ package regex
 
 def foo = "he he goes to school"
 def fooArr = foo.split("\\s+")
+def map = [:]
 
-fooArr.each {
-    
+fooArr.each {k -> if (map.get(k) !=  null) map.put(k, ++map.get(k))
+                  else map.put(k, 1)
+}
+
+map.each {k, v ->
+    print k + ": " + v + " "
 }

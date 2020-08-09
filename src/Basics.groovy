@@ -88,3 +88,51 @@ println(initList)
 
 initList.removeAll(["Ashes"])
 println(initList)
+
+// String Indexing
+def foo = "String"
+println(foo[-1]) // Last Character
+println(foo[2..-1])
+
+// Multiline Strings
+def bar = """
+How many roads must a
+man walks down
+"""
+println(bar)
+
+// Tokenize
+def str = "Tokenize this string, NOW!"
+println str.tokenize()
+println str.split()
+
+// String Operations
+def str2 = "Add me"
+println str2*3
+println str2 + " now"
+
+// String methods
+def fooBar = "Shine on you crazy diamond"
+fooBar.each {
+    if (it == 'd')
+        println("d found")
+}
+
+def animals = [:]
+animals["key1"] = "Doggo"
+animals["key2"] = "Puppy"
+animals["key3"] = "Dog"
+
+println animals
+animals.each {
+    println it
+}
+
+// Regex
+def regex = ~"Regex"
+println "Regox".matches(regex)
+
+def ipRegex = ~"[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}"
+def ip = "127.0.0.1234"
+println ip.matches(ipRegex)
+
